@@ -55,12 +55,12 @@ class WinterSport(models.Model):
 
 
 class Registration(models.Model):
-    name = models.CharField(max_length=15, )
+    name = models.CharField(max_length=15)
     lastname = models.CharField(max_length=15)
     username = models.CharField(max_length=15)
     patronymic = models.CharField(max_length=15)
     email = models.EmailField(blank=True, unique=True)
-    telnumber = models.IntegerField(max_length=11, unique=True)
+    telnumber = models.IntegerField(blank=True, unique=True)
     password = models.CharField(max_length=10)
 
     def __str__(self):
